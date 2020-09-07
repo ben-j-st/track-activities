@@ -63,5 +63,5 @@ Email: ben_j_stephens@hotmail.com
 
 ## Screenshot 
 
-![screenshot](images/exerciseTracker.PNG) 
+![screenshot](public/images/exerciseTracker.PNG) 
 
