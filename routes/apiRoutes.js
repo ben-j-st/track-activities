@@ -9,13 +9,6 @@ module.exports = function (app) {
         .catch(err => console.error("error message", err));
     })
 
-    app.get("/api/workouts/range", (req, res) => {
-        Workout.find()
-        .then(data => res.json(data))
-        .catch(err => console.error("error message", err));
-    })
-
-
     app.post("/api/workouts", (req, res) => {
         Workout.create({})
         .then(data => res.json(data))
@@ -31,4 +24,11 @@ module.exports = function (app) {
         .then(data => res.json(data))
         .catch(err => console.error("error message", err))
     });
+
+    app.get("/api/workouts/range", (req, res) => {
+        Workout.find()
+        .then(data => res.json(data))
+        .catch(err => console.error("error message", err));
+    })
+
 }
