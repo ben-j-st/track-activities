@@ -1,9 +1,8 @@
 const Workout = require("../models/workout.js");
-const router = require("express").Router();
 
 // Get users last workout
 
-router.get("/api/workouts", (req, res) => {
+app.get("/api/workouts", (req, res) => {
     Workout.find({}, (err, data) => {
         if (err) {
             console.log(err)
@@ -12,17 +11,19 @@ router.get("/api/workouts", (req, res) => {
     })
 })
 
-router.post("/api/workouts", (req, res) => {
-    Workout.create(
-        {
-            day: new Date(),
-            exercise: [],
-        }).then(workoutData => {
-            res.json(workoutData)
-        }) 
+app.post("/api/workouts", (req, res) => {
+    console.log("trying to add a workout \n");
+    Workout.create({})
+    .then(workoutData => {
+        console.error(workoutData);
+        res.json(workoutData)
+    }).catch(err => {
+        console.log("err", err);
+    }) 
 })
 
-router.put("/api/workouts/:id", (req, res) => {
+app.put("/api/workouts/:id", (req, res) => {
+    console.log("running an update on a workout \n")
     const id = req.params.id;
 
     Workout.update(
