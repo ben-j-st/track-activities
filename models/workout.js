@@ -15,7 +15,7 @@ const workoutSchema = new Schema(
           required: "You Must Select A Type Of Exercise"
         },
         name: {
-          type: string,
+          type: String,
           trim: true,
           required: "Please Enter The Name Of The Exercise"
         },
