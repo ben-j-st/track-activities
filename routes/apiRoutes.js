@@ -1,6 +1,7 @@
 const Workout = require("../models/workout.js");
 
 // Get users last workout
+module.exports = function (app) {
 
 app.get("/api/workouts", (req, res) => {
     Workout.find({}, (err, data) => {
@@ -45,5 +46,4 @@ app.put("/api/workouts/:id", (req, res) => {
         }
     )
 })
-
-module.exports = router;
+}
