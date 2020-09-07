@@ -9,7 +9,7 @@ A workout tracker web application, to help user track there progress based aroun
 
 ## Links
 
-<a target="_blank" href="https://gentle-anchorage-18985.herokuapp.com/">Live Heroku Version</a>
+<a href="https://gentle-anchorage-18985.herokuapp.com/">Live Heroku Version</a>
 
 ## Table of Contents
 
