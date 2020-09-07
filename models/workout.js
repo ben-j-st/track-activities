@@ -1,11 +1,12 @@
 const mongoose = require("mongoose");
+
 const Schema = mongoose.Schema;
 
 const workoutSchema = new Schema(
   {
     day: { 
       type: Date, 
-      default: Date.now 
+      default: () => new Date()
     },
     exercises: [
       {
@@ -21,7 +22,7 @@ const workoutSchema = new Schema(
         },
         duration: {
           type: Number,
-          required: "Please Enter The Exercise Duration In Minuets"
+          required: "Please Enter The Exercise Duration In Minutes"
         },
         weight: {
           type: Number
