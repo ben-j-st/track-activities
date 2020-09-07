@@ -7,7 +7,7 @@ const workoutSchema = new Schema(
       type: Date, 
       default: Date.now 
     },
-    exercise: [
+    exercises: [
       {
         type: {
           type: String,
@@ -40,7 +40,6 @@ const workoutSchema = new Schema(
   },
   {
     toJSON: {
-      // include any virtual properties when data is requested
       virtuals: true
     }
   }
