@@ -6,23 +6,22 @@ const workoutSchema = new Schema(
   {
     day: { 
       type: Date, 
-      default: () => new Date()
+      default: Date.now
     },
     exercises: [
       {
         type: {
           type: String,
-          trim: true,
           required: "You Must Select A Type Of Exercise"
         },
         name: {
           type: String,
           trim: true,
-          required: "Please Enter The Name Of The Exercise"
+          required: "Exercise Must Have A Name"
         },
         duration: {
           type: Number,
-          required: "Please Enter The Exercise Duration In Minutes"
+          required: "Missing Exercise Duration"
         },
         weight: {
           type: Number
